@@ -15,26 +15,18 @@ export function Intro() {
       setShow(false);
       return;
     }
-    document.body.style.overflow = "hidden";
     const t = window.setTimeout(() => {
       sessionStorage.setItem("stone-in", "1");
       setShow(false);
     }, 1500);
-    return () => {
-      window.clearTimeout(t);
-      document.body.style.overflow = "";
-    };
+    return () => window.clearTimeout(t);
   }, []);
-
-  useEffect(() => {
-    if (!show) document.body.style.overflow = "";
-  }, [show]);
 
   return (
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#090908] text-[#f3efe6]"
+          className="pointer-events-none fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#090908] text-[#f3efe6]"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
         >

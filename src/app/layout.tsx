@@ -5,7 +5,6 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileBar } from "@/components/layout/MobileBar";
 import { Intro } from "@/components/layout/Intro";
 import { Cta } from "@/components/layout/Cta";
-import { LenisRoot } from "@/components/layout/Lenis";
 import { site, heroLine } from "@/data/site";
 import "./globals.css";
 
@@ -58,14 +57,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-GB">
       <body className={`${sans.variable} ${display.variable} ${mono.variable} antialiased`}>
         <div className="grain" aria-hidden />
-        <LenisRoot>
-          <Intro />
-          <Header />
-          <main>{children}</main>
-          <Cta />
-          <Footer />
-          <MobileBar />
-        </LenisRoot>
+        <Intro />
+        <Header />
+        <main>{children}</main>
+        <Cta />
+        <Footer />
+        <MobileBar />
       </body>
     </html>
   );
