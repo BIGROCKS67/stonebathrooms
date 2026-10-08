@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://stonebathrooms.uk
+Sitemap: https://stonebathrooms.uk/sitemap.xml
